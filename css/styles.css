@@ -1,0 +1,170 @@
+
+
+:root {
+    --fondo: rgb(31, 31, 31);
+    --titulo: rgb(238, 45, 78);
+    --secundario: rgb(0, 255, 255);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --f_titulo: 'Bebas Neue', cursive;
+    --f_parrafo: 'Merriweather', serif;
+    --f_foooter: 'Quicksand', sans-serif;
+
+    --html: rgb(223, 71, 24);
+    --css: rgb(0, 195, 221);
+
+}
+
+/* Globales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Se agrega aparte --> 1rem == 10px */
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background-color: var(--fondo);
+    font-family: Arial, Helvetica, sans-serif; /*Recomendado en todo*/
+    font-size: 1.8rem;
+    line-height: 1.5; /*Interlineado*/
+}
+p {
+    font-family: var(--f_parrafo);
+    color: var(--blanco);
+}
+a {
+    text-decoration: none; /*Recomendado en todo (elimina la linea de los enlaces)*/
+}
+
+img {
+    max-width: 100%;
+}
+h1, h2, h3 {
+    text-align: center; /*centrar titulos*/
+    color: var(--titulo);
+    font-family: var(--f_titulo);
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+/* fin globales */
+
+.contenido {
+    max-width: 120rem; /*tamaño del contenido principal*/
+    width: 90%;
+    margin: 0 auto; /*permite centrar el contenido*/
+}
+
+.encabezado {
+    background-color: transparent;
+}
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between; /*un elemneto a la der y otro a izq, flex*/
+        align-items: center; /*alinea en eje Y, flex*/
+    }
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    } 
+}
+.logo {
+    font-family: var(--f_titulo);
+    margin: 0;
+}
+.navegacion__enlace {
+    display: block; /*cintenido arriba hacia abajo*/
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--secundario);
+    margin-left: 1rem;
+}
+.header {
+    background-image: url(../img/header.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    align-items: center;
+    text-align: center; /*centar imagen*/
+}
+.header__img {
+    text-align: center;
+    width: 60%;
+    margin-top: 8rem;
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center; /*centrar imagen*/
+    }
+    .header__img {
+        grid-column: 1 / 2;
+        width: 75%;
+        margin-top: 0rem;
+    }
+    .header__titulo {
+        grid-column: 2/ 3;
+        text-align: center;
+        font-size: 6rem;
+    }
+}
+/* Servicios */
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+}
+
+
+
+
+
+/* Portafolio / Protectos */
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.tecnologias {
+    width: 100%;
+    background-color: transparent;
+}
+.tecnologia {
+    text-align: left;
+    padding: 0 1rem;
+    color: var(--blanco);
+}
+.html_1 {
+    width: 61.1%;
+    background-color: var(--html);
+}
+.css_1 {
+    width: 38.9%;
+    background-color: var(--css);
+}
+
+.html_2 {
+    width: 74.8%;
+    background-color: var(--html);
+}
+.css_2 {
+    width: 25.2%;
+    background-color: var(--css);
+}
