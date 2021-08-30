@@ -71,6 +71,9 @@ h3 {
 .encabezado {
     background-color: transparent;
 }
+.navegacion {
+    text-align: center;
+}
 @media (min-width: 768px) {
     .barra {
         display: flex;
@@ -208,4 +211,7 @@ h3 {
 }
 .derechos__bold {
     font-weight: bold;
+}
+.logo__footer {
+    font-size: 6rem;
 }
