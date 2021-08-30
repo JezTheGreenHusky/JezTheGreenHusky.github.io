@@ -35,6 +35,7 @@ html {
 p {
     font-family: var(--f_parrafo);
     color: var(--blanco);
+    line-height: 1.2;
 }
 a {
     text-decoration: none; /*Recomendado en todo (elimina la linea de los enlaces)*/
@@ -53,17 +54,17 @@ h1 {
     font-size: 4rem;
 }
 h2 {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
 }
 h3 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
 }
 
 /* fin globales */
 
 .contenido {
     max-width: 120rem; /*tamaño del contenido principal*/
-    width: 90%;
+    width: 90%; /*para que el texto no toque las orillas en celulares*/
     margin: 0 auto; /*permite centrar el contenido*/
 }
 
@@ -98,6 +99,11 @@ h3 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+}
+.header__contenedor {
+    background-color: rgba(0, 0, 0, 0.582);
+    height: 100%; /*que lo escuro cubra toda la imagen*/
+    width: 100%;
     align-items: center;
     text-align: center; /*centar imagen*/
 }
@@ -108,7 +114,7 @@ h3 {
 }
 
 @media (min-width: 768px) {
-    .header {
+    .header__contenedor {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center; /*centrar imagen*/
@@ -127,10 +133,19 @@ h3 {
 /* Servicios */
 .servicios {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    margin-bottom: 4rem;
 }
-
+.servicio {
+    text-align: center;
+    background-color: var(--negro);
+    width: 90%;
+    height: auto;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    padding-top: 0rem;
+}
 
 
 
@@ -140,6 +155,12 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+}
+.proyecto__web {
+    background-color: var(--negro);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    padding-top: 0rem;
 }
 
 .tecnologias {
@@ -167,4 +188,21 @@ h3 {
 .css_2 {
     width: 25.2%;
     background-color: var(--css);
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--negro);
+    padding: 3rem 0 1rem 0;
+    margin-top: 4rem;
+}
+.centro {
+    text-align: center;
+}
+.derechos {
+    font-family: var(--f_foooter);
+}
+.derechos__bold {
+    font-weight: bold;
 }
