@@ -115,6 +115,14 @@ h3 {
     text-align: center;
     width: 60%;
     margin-top: 8rem;
+    max-height: 320px;
+    max-width: 320px;
+}
+.header__titulo {
+    margin: 15%;
+    width: 70%;
+    border: 1px solid var(--secundario);
+    border-radius: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -125,21 +133,35 @@ h3 {
     }
     .header__img {
         grid-column: 1 / 2;
+        max-width: 90%;
+        max-height: 90%;
         width: 75%;
         margin-top: 0rem;
     }
     .header__titulo {
         grid-column: 2/ 3;
         text-align: center;
+        font-size: 4.5rem;
+        margin: 0rem;
+        padding: 2rem;
+
+    }
+}
+@media (min-width: 1024px) {
+    .header__titulo {
         font-size: 6rem;
     }
 }
 /* Servicios */
-.servicios {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-    margin-bottom: 4rem;
+.servicios{
+    margin-bottom: 8rem;
+}
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
 }
 .servicio {
     text-align: center;
@@ -148,18 +170,26 @@ h3 {
     height: auto;
     border-radius: 1rem;
     padding: 1.5rem;
-    padding-top: 0rem;
+    padding-top: 1rem;
     border-bottom: 1px solid var(--secundario);
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .servicio {
+        padding-top: 0rem;
+        margin-bottom: 0rem;
+    }
 }
 
 
 
-
 /* Portafolio / Protectos */
-.proyectos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+@media (min-width: 768px) {
+    .proyectos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
 }
 .proyecto__web {
     background-color: var(--negro);
@@ -178,7 +208,18 @@ h3 {
     padding: 0 1rem;
     color: var(--blanco);
 }
-.html_1 {
+.boton {
+    display: block;
+    background-color: var(--fondo);
+    color: var(--titulo);
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+}
+/* .html_1 {
     width: 61.1%;
     background-color: var(--html);
 }
@@ -194,7 +235,7 @@ h3 {
 .css_2 {
     width: 25.2%;
     background-color: var(--css);
-}
+} */
 
 
 /* Footer */
