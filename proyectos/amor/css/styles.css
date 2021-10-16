@@ -283,8 +283,10 @@ Galeria con MAUUI
 }
 .item__contenido img {
     cursor: pointer;
-    max-height: 400px;
-    max-width: 300px;
+    width: 100%;
+    padding: 0.7rem;
+    /* max-height: 400px;
+    max-width: 300px; */
 }
 @media (min-width: 768px) {
     .item__contenido img {
@@ -296,6 +298,7 @@ Galeria con MAUUI
     .item__contenido img {
         max-height: 600px;
         max-width: 650px;
+	padding: 0rem;
     }
 }
 /* 
