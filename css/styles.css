@@ -261,25 +261,26 @@ h3 {
 -----------YO.HTML-----------
 ======================*/
 
-
 .yo__contenedor {
     background-color: var(--negro);
     padding: 1rem;
 }
+
 .yo__contenedor2 {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    gap: 10rem;
     padding: 1rem;
     background-color: rgb(69, 88, 88);
+    text-align: center;
 }
-.yo__imagen {
-    background: transparent;
-    background-color: transparent;
+@media (min-width: 768px) {
+    .yo__contenedor2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 10rem;
+    }
 }
+
 .yo__descripcion p {
     color: var(--negro);
     font-weight: bold;
