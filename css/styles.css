@@ -15,6 +15,7 @@
     --html: rgb(223, 71, 24);
     --css: rgb(0, 195, 221);
     --js: rgb(250, 231, 58);
+    --python: #00b341;
 
 }
 
@@ -315,5 +316,11 @@ Competencias
 .JS {
     width: 10%;
     background-color: var(--js);
+    border-radius: 1rem;
+}
+
+.python {
+    width: 60%;
+    background-color: var(--python);
     border-radius: 1rem;
 }
