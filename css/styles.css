@@ -6,6 +6,7 @@
     --secundario: rgb(0, 255, 255);
     --blanco: #FFF;
     --negro: #000;
+    --gris1: rgb(69, 88, 88);
 
     --f_titulo: 'Bebas Neue', cursive;
     --f_parrafo: 'Merriweather', serif;
@@ -13,6 +14,7 @@
 
     --html: rgb(223, 71, 24);
     --css: rgb(0, 195, 221);
+    --js: rgb(250, 231, 58);
 
 }
 
@@ -59,7 +61,14 @@ h2 {
 h3 {
     font-size: 2.8rem;
 }
+/*utilidades*/
+.subtitulo {
+    font-size: 4rem;
+}
 
+.no-margin {
+    margin: 0rem;
+}
 /* fin globales */
 
 .contenido {
@@ -73,6 +82,9 @@ h3 {
 }
 .navegacion {
     text-align: center;
+}
+.barra-color {
+    background-color: var(--negro);
 }
 @media (min-width: 768px) {
     .barra {
@@ -160,13 +172,14 @@ h3 {
     .servicios {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
+        column-gap: 4rem;
+        row-gap: 4rem;
     }
 }
 .servicio {
     text-align: center;
     background-color: var(--negro);
-    width: 90%;
+    width: 100%;
     height: auto;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -219,23 +232,6 @@ h3 {
     border: none;
     border-radius: 1rem;
 }
-.html_1 {
-    width: 61.1%;
-    background-color: var(--html);
-}
-.css_1 {
-    width: 38.9%;
-    background-color: var(--css);
-}
-
-.html_2 {
-    width: 74.8%;
-    background-color: var(--html);
-}
-.css_2 {
-    width: 25.2%;
-    background-color: var(--css);
-}
 
 
 /* Footer */
@@ -268,9 +264,10 @@ h3 {
 
 .yo__contenedor2 {
     padding: 1rem;
-    background-color: rgb(69, 88, 88);
+    background-color: var(--gris1);
     text-align: center;
 }
+
 @media (min-width: 768px) {
     .yo__contenedor2 {
         display: flex;
@@ -284,4 +281,39 @@ h3 {
 .yo__descripcion p {
     color: var(--negro);
     font-weight: bold;
+}
+
+
+/*
+Competencias
+*/
+.competencias {
+    margin: 1rem;
+}
+.competencias__titulo {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.competencias__tecnologias {
+    background-color: var(--fondo);
+    border-radius: 1rem;
+}
+
+.html_1 {
+    width: 75%;
+    background-color: var(--html);
+    border-radius: 1rem;
+}
+.css_1 {
+    width: 60%;
+    background-color: var(--css);
+    border-radius: 1rem;
+}
+.JS {
+    width: 10%;
+    background-color: var(--js);
+    border-radius: 1rem;
 }
