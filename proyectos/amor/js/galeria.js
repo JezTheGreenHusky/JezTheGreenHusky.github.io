@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 	// Agregamos el listener para la barra de busqueda
 	document.querySelector('#barra-busqueda').addEventListener('input', (evento) => {
         // obtener el input y ponerlo en una variable
-		const busqueda = evento.target.value;
+		const busqueda = evento.target.value.toLowerCase();
         // filtrar por elemento escrito (input)
 		grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
 	});
