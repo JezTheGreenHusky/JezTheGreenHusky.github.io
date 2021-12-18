@@ -179,11 +179,12 @@ p {
 
 .header__redes {
     display: flex;
-    align-items: center;
-    padding: .4rem;
+    align-items: flex-end;
+    padding: 0rem;
     gap: .5rem;
     text-align: center;
     margin: 1rem;
+    margin-bottom: 5rem;
 
 
     font-size: 1.4rem;
@@ -191,12 +192,12 @@ p {
     transform: translatex(50%) translateY(-50%) rotate(-90deg); /*Para dar vuleta las redes*/
 
     grid-column: 2/7;
-    grid-row: 5/8;
+    grid-row: 2/3;
 }
 @media (min-width: 1080px) {
     .header__redes {
         grid-column: 3/7;
-        grid-row: 2/8;
+        grid-row: 2/3;
 
         font-size: 1.6rem;
     }
@@ -206,6 +207,7 @@ p {
 }
 .bx {
     padding: .3rem;
+    padding-bottom: 0rem
 }
 
 .header__boton {
