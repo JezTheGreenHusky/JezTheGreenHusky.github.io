@@ -159,9 +159,11 @@ p {
 .header__titulo {
     margin-bottom: .5rem;
     font-size: 3rem;
+    text-transform: uppercase;
 }
 .header__texto--descripcion {
     font-size: 1.5rem;
+    text-transform: uppercase;
 }
 @media (min-width: 1080px) {
     .header__titulo {
@@ -308,6 +310,7 @@ p {
 }
 .cotizar__texto--titulo {
     font-size: 2.6rem;
+    text-transform: uppercase;
 }
 
 .cotizar__texto--descripcion {
@@ -364,6 +367,7 @@ p {
     font-family: var(--font1);
     cursor: pointer;
     font-size: 1.5rem;
+    text-transform: uppercase;
 
     position: absolute;
     bottom: 0;
@@ -372,4 +376,50 @@ p {
 }
 .boton:hover {
     background-color: var(--gris);
+}
+
+
+/*======================
+-----------Media queries: otros-----------
+======================*/
+
+@media (min-width: 280px) {
+    .diapo1,
+    .diapo2 {
+        height: 65.3rem;
+    }
+}
+
+@media (min-width: 360px) {
+    .diapo1,
+    .diapo2 {
+        height: 64rem;
+    }
+}
+
+@media (min-width: 540px) {
+    .diapo1,
+    .diapo2 {
+        height: 72rem;
+    }
+}
+@media (min-width: 768px) {
+    .diapo1,
+    .diapo2 {
+        height: 102.4rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .diapo1,
+    .diapo2 {
+        height: 80rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .diapo1,
+    .diapo2 {
+        height: 75rem;
+    }
 }
