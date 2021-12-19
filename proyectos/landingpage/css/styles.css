@@ -79,6 +79,7 @@ p {
 /*======================
 -----------Diapositiva 1 / HEADER-----------
 ======================*/
+
 .diapo1 {
     scroll-snap-align: start;
     background-image: 
@@ -91,7 +92,8 @@ p {
     background-repeat: no-repeat;
     background-position: 10%;
     background-attachment: fixed;
-    height: 70rem;
+
+    height: 100vh; /*Ocupa todo el view port*/
 
     /* ANIMACION */
     animation: fondo_header 18s infinite ease-in-out;
@@ -114,7 +116,8 @@ p {
         background-size: 140%;
         background-position: 50% 10%;
 
-        height: 80rem;
+        /* height: 80rem; */
+        height: 100vh;
 
         /* ANIMACION */
     animation: fondo_header 15s infinite ease-in-out;
@@ -223,7 +226,7 @@ p {
 }
 
 .header__boton--texto {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 1rem;
 }
 @media (min-width: 1080px) {
@@ -271,7 +274,8 @@ p {
     background-repeat: no-repeat;
     background-position: 10%;
     background-attachment: fixed;
-    height: 80rem;
+    /* height: 80rem; */
+    height: 100vh;
 
     /* ANIMACION */
     animation: fondo_formulario 18s infinite ease-in-out;
@@ -320,10 +324,10 @@ p {
 }
 @media (min-width: 1080px) {
     .cotizar__texto--titulo {
-        font-size: 4rem;
+        font-size: 4.6rem;
     }
     .cotizar__texto--descripcion {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 }
 .cotizar__formulario {
@@ -351,6 +355,7 @@ p {
     border-radius: 1rem;
     border: none;
     font-family: var(--font2);
+    font-size: 1.3rem;
     padding: .5rem .8rem;
     color: var(--gris);
     background-color: rgba(255, 255, 255, .64);
@@ -378,50 +383,4 @@ p {
 }
 .boton:hover {
     background-color: var(--gris);
-}
-
-
-/*======================
------------Media queries: otros-----------
-======================*/
-
-@media (min-width: 280px) {
-    .diapo1,
-    .diapo2 {
-        height: 65.3rem;
-    }
-}
-
-@media (min-width: 360px) {
-    .diapo1,
-    .diapo2 {
-        height: 64rem;
-    }
-}
-
-@media (min-width: 540px) {
-    .diapo1,
-    .diapo2 {
-        height: 72rem;
-    }
-}
-@media (min-width: 768px) {
-    .diapo1,
-    .diapo2 {
-        height: 102.4rem;
-    }
-}
-
-@media (min-width: 1080px) {
-    .diapo1,
-    .diapo2 {
-        height: 80rem;
-    }
-}
-
-@media (min-width: 1280px) {
-    .diapo1,
-    .diapo2 {
-        height: 75rem;
-    }
 }
