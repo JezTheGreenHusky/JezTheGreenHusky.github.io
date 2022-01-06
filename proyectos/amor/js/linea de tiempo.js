@@ -43,4 +43,7 @@ const getOffset = (el) => {
       connect(f3, f4, 'green', 5);
       connect(f4, f5, 'green', 5);
       connect(f5, f6, 'green', 5);
+      connect(f6, f7, 'green', 5);
+      connect(f7, f8, 'green', 5);
+      connect(f8, f9, 'green', 5);
   } 

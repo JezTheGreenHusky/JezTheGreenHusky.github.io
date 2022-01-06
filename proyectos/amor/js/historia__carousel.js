@@ -95,6 +95,8 @@ window.addEventListener('load', function(){
         }
     });
 
+    // Primera cita / evento 6
+
     new Glider(document.querySelector('#carousel6'), {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -116,6 +118,80 @@ window.addEventListener('load', function(){
             }
           ]
     });
+
+    // Segunda cita / evento 7
+
+    new Glider(document.querySelector('#carousel7'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: '#dot7',
+        draggable: true,
+        arrows: {
+            prev: '#anterior7',
+            next: '#siguente7'
+        },
+        responsive: [
+            {
+              // screens greater than >= 775px
+              breakpoint: 1024,
+              settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+            }
+          ]
+    });
+
+    // Tercera cita / evento 8
+
+    new Glider(document.querySelector('#carousel8'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: '#dot8',
+        draggable: true,
+        arrows: {
+            prev: '#anterior8',
+            next: '#siguente8'
+        },
+        responsive: [
+            {
+              // screens greater than >= 775px
+              breakpoint: 1024,
+              settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              }
+            }
+          ]
+    });
+
+    // cuarta cita / evento 9
+
+    new Glider(document.querySelector('#carousel9'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: '#dot9',
+        draggable: true,
+        arrows: {
+            prev: '#anterior9',
+            next: '#siguente9'
+        },
+        responsive: [
+            {
+              // screens greater than >= 775px
+              breakpoint: 1024,
+              settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+            }
+          ]
+    });
+
+    // 
 });
 
 /* var sliders = document.querySelectorAll('.carousel__lista');
