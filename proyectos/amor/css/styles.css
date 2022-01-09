@@ -468,14 +468,18 @@ overlay
 
 /* Correcion de un glitch en dispositivos moviles
 se corrigio con margin left y right: */
+
 .carousel {
     margin-left: -3rem;
     margin-right: 2rem;
+    /* height: 100vh; */
 }
+
 @media (min-width: 768px) {
     .carousel {
         margin-left: 0rem;
         margin-right: 2rem;
+        margin-top: 5%;
     }
 }
 /* fin coreccion */
@@ -519,10 +523,12 @@ button {
 
 .carousel__anterior1 {
     /* == tamaño felcha */
-    left: 20%;
+    left: 30%;
+    bottom: -50%;
 }
 .carousel__siguente1 {
-    right: 20%;
+    right: 30%;
+    bottom: -50%;
 }
 
 
@@ -530,7 +536,9 @@ button {
     /* ocultar el scroll horizontal de firefox */
     overflow: hidden;
 }
-
+.carousel__elemento {
+    width: auto;
+}
 .carousel__elemento p {
     text-align: center;
     color: var(--negro);

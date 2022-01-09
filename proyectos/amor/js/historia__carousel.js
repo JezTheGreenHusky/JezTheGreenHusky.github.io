@@ -4,7 +4,14 @@
 var glider_list = document.querySelectorAll('.carousel__lista');
 var dot_list = document.querySelectorAll('.carousel__indicadores');
 var anterior_list = document.querySelectorAll('.carousel__anterior');
+var anterior_list1 = document.querySelectorAll('.carousel__anterior1');
 var siguente_list = document.querySelectorAll('.carousel__siguente');
+var siguente_list1 = document.querySelectorAll('.carousel__siguente1');
+
+var num_ant = anterior_list1.length
+var num_sig = siguente_list1.length
+
+console.log(anterior_list1)
 
 // 2. Añadir ids
 var i = 1;
@@ -21,14 +28,30 @@ dot_list.forEach((dot) => {
     i += 1
 });
 
+// " anteriores y siguentes"
+
 var i = 1;
+anterior_list1.forEach((anterior) => {
+    anterior.id = 'anterior' + i
+    console.log(anterior.id);
+    i += 1
+});
+
+var i = 6; // anterior_list1.lenght + 1
 anterior_list.forEach((anterior) => {
     anterior.id = 'anterior' + i
-    // console.log(anterior.id);
+    console.log(anterior.id);
     i += 1
 });
 
 var i = 1;
+siguente_list1.forEach((siguente) => {
+    siguente.id = 'siguente' + i
+    // console.log(siguente.id);
+    i += 1;
+});
+
+var i = 6;
 siguente_list.forEach((siguente) => {
     siguente.id = 'siguente' + i
     // console.log(siguente.id);
