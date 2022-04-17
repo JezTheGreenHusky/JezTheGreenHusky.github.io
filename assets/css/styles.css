@@ -270,6 +270,9 @@ h3 {
         margin: 0rem;
         margin-bottom: 22px;
     }
+    .hero__texto p {
+        font-size: 2.4rem;
+    }
 }
 @media (min-width: 1024px) {
     .hero__titulo {
@@ -558,6 +561,8 @@ Etiquetas
 }
 .etiquetas__contenedor--interno {
     background-color: var(--negro);
+    height: 100%;
+    border-radius: 1rem;
     padding: 1.5rem;
 }
 
