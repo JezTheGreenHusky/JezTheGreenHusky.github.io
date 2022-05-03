@@ -35,9 +35,9 @@ html {
     font-size: 62.5%; /* Se agrega aparte --> 1rem == 10px */
   }
   
-  *, *:before, *:after {
+*, *:before, *:after {
     box-sizing: inherit;
-  }
+}
 
 body {
     background-color: var(--fondo);
@@ -617,6 +617,7 @@ footer p {
     color: var(--blanco);
     padding: 2rem 3rem;
     text-align: center;
+    font-size: 16px;
 }
 footer a {
     color: #00ad00;
