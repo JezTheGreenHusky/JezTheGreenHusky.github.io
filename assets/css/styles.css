@@ -84,6 +84,12 @@ h3 {
 .centro {
     text-align: center;
 }
+.fadeIn {
+    opacity: 1;
+}
+.fadeOut {
+    opacity: 0;
+}
 
 /*======================
 -----------NAV-----------
@@ -232,6 +238,16 @@ h3 {
     margin-top: 8rem;
     max-height: 350px;
     max-width: 350px;
+}
+.hero__fade {
+    display: none;
+    font-size: 50px;
+    transition: opacity 2s;
+}
+@media (min-width: 768px) {
+    .hero__fade {
+        display: block;
+    }
 }
 .hero__texto {
     margin: 8% auto;

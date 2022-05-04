@@ -1,8 +1,13 @@
 const grid = new Muuri('.grid', {
-    layout: {
+    dragEnabled: true,
+	layout: {
         rounding: false,
     }
 });
+
+const randomChoice = (min, max) => {
+	return Math.random() * (max - min) + min;
+}
 
 window.addEventListener('load', () => {
 
@@ -18,7 +23,52 @@ window.addEventListener('load', () => {
 			top: offsetTop -85,
 			behavior: "smooth"
 		});
-	})
+	});
+
+	// fade in out del hero
+
+	let hero_text = document.querySelectorAll(".hero__fade");
+
+	const opciones = [
+		"Desarrollador FullStack",
+		"Diseños Responsive",
+		"JavaScript",
+		"PostgreSQL",
+		"NodeJS",
+		"Desarrollo de APIs",
+		"Webs Interactivas",
+		"Desarrollo Frontend"
+	]
+
+    // transition del css en 2s
+    let loop = (t) => {
+        hero_text.forEach((text, index) => {
+            setTimeout(() => {
+                text.classList.remove("fadeOut");
+                text.classList.add("fadeIn");
+            }, t * 3000);
+    
+            t += 2;
+    
+            setTimeout(() => {
+                text.classList.remove("fadeIn");
+                text.classList.add("fadeOut");
+
+				setTimeout(() => {
+					let random = parseInt(randomChoice(0, opciones.length));
+					// console.log(random)
+					text.innerHTML = opciones[random]
+				}, 1500)
+
+            }, t * 3000);
+
+            t++
+
+            if(index == hero_text.length - 1 && t < 200){
+                loop(t)
+            }
+        })
+    }
 
 	// MUURI
 
@@ -49,12 +99,6 @@ window.addEventListener('load', () => {
 		});
 	});
 
-    // document.querySelector('#etiquetas_furry a').addEventListener('click', (evento) => {
-	// 	const busqueda = evento.target.value;
-    //     // filtrar por elemento escrito (input)
-	// 	grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
-	// });
-
     // Agregamos los listener de los enlaces para filtrar por etiqueta.
 	const enlaces_e = document.querySelectorAll('#etiquetas_lista a span');
 	enlaces_e.forEach((elemento) => {
@@ -78,4 +122,9 @@ window.addEventListener('load', () => {
         // filtrar por elemento escrito (input)
 		grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
 	});
+
+
+	// uso del loop
+	loop(0);
+	
 });
