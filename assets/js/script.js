@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
 
 	const opciones = [
 		"Desarrollador FullStack",
-		"Diseños Responsive",
+		"Diseños Responsivos",
 		"JavaScript",
 		"PostgreSQL",
 		"NodeJS",

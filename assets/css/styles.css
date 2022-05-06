@@ -344,7 +344,7 @@ competencias
 }
 
 .html {
-    width: 75%;
+    width: 85%;
     background-color: var(--html_b);
     border-radius: 1rem;
 }
@@ -352,7 +352,7 @@ competencias
     color: var(--html);
 }
 .css {
-    width: 60%;
+    width: 70%;
     background-color: var(--css_b);
     border-radius: 1rem;
 }
@@ -360,7 +360,7 @@ competencias
     color: var(--css);
 }
 .js {
-    width: 40%;
+    width: 75%;
     background-color: var(--js_b);
     border-radius: 1rem;
 }
