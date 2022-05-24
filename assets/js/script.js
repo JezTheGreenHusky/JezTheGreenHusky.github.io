@@ -11,19 +11,26 @@ const randomChoice = (min, max) => {
 
 window.addEventListener('load', () => {
 
-	document.querySelector(".barra__navegacion").addEventListener("click", (e) => {
-		let link = e.target;
-		console.log(link)
-
-		e.preventDefault();
-		const href = link.getAttribute("href");
-		const offsetTop = document.querySelector(href).offsetTop;
-		
-		scroll({
-			top: offsetTop -85,
-			behavior: "smooth"
+	let smooth = (barra) => {
+		document.querySelector(barra).addEventListener("click", (e) => {
+			let link = e.target;
+			console.log(link)
+	
+			e.preventDefault();
+			const href = link.getAttribute("href");
+			const offsetTop = document.querySelector(href).offsetTop;
+			
+			scroll({
+				top: offsetTop -95,
+				behavior: "smooth"
+			});
 		});
-	});
+	}
+
+	smooth(".barra__navegacion")
+	smooth(".nav_busqueda")
+
+	
 
 	// fade in out del hero
 
