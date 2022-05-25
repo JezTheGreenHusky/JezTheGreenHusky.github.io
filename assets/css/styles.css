@@ -50,10 +50,6 @@ p {
     color: var(--blanco);
     line-height: 1.2;
 }
-#competencias p,
-#sobre_mi p {
-    text-align: justify;
-}
 a {
     text-decoration: none; /*Recomendado en todo (elimina la linea de los enlaces)*/
     color: var(--blanco);
@@ -91,6 +87,9 @@ h3 {
 .centro {
     text-align: center;
 }
+.oculto {
+    display: none !important;
+}
 .fadeIn {
     opacity: 1;
 }
@@ -101,6 +100,23 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.parrafo {
+    text-align: justify;
+}
+.mitad {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+@media (min-width: 768px) {
+    .mitad {
+        column-gap: 2rem;
+    }
+}
+
+.mitad > div {
+    padding: 2rem;
 }
 /*======================
 -----------NAV-----------
@@ -421,6 +437,7 @@ PORTAFOLIO
 ======================*/
 .portafolio {
     background-color: var(--negro);
+    padding: 2rem 0rem;
     margin: 20px auto;
 }
 .busqueda {
@@ -544,6 +561,14 @@ Galeria con MAUUI
 /*
 tarjeta
 */
+@media (min-width: 768px) {
+    .tarjeta .tarjeta__links a {
+        display: none;
+    }
+    .tarjeta:hover .tarjeta__links a {
+        display: block;
+    }
+}
 
 .tarjeta {
     border-bottom: 1px solid var(--secundario);
@@ -566,6 +591,7 @@ tarjeta
     margin: 16px auto 0px auto;
     display: flex;
     justify-content: center;
+    gap: .5rem;
 }
 .tarjeta__links a {
     width: 100%;
